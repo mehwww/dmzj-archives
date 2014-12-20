@@ -1,0 +1,16 @@
+{
+  "name": "dmzj-archives",
+  "version": "0.1.0",
+  "description": "动漫之家漫画存档",
+  "main": "src/index.js",
+  "author": "mehwww",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mehwww/dmzj-archives.git"
+  },
+  "dependencies": {
+    "cheerio": "^0.18.0",
+    "request": "^2.51.0"
+  }
+}
