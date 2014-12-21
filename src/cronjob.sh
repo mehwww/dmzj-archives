@@ -12,14 +12,22 @@ NODE=$(which node)
 comment=""
 
 get_comment(){
-  diff=$(git diff --numstat)
-  count=$(git diff --numstat | wc -l)
-
-  for((i=0;i<$count;i=i+1))
+  i=1
+  for word in $(git diff --numstat)
   do
-    comment+=`echo $diff | cut -d " " -f $(($i*3+3))`":"
-    comment+=`echo $diff | cut -d " " -f $(($i*3+1))`"+"
-    comment+=`echo $diff | cut -d " " -f $(($i*3+2))`"- "
+    case $((i++%3)) in
+      1)
+        comment=$word"+ "$comment
+        ;;
+      2)
+        comment=$word"-"$comment
+        ;;
+      0)
+        comment=$word":"$comment
+        ;;
+      *)
+        ;;
+    esac
   done
 }
 
