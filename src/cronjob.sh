@@ -36,8 +36,8 @@ printf "$(date)\n"
 printf "=================\n"
 ${NODE} ${DIR}/src/index.js
 printf "=================\n"
-get_comment
 cd ${DIR}
+get_comment
 git add .
 git commit -a -m "$comment"
 git push
