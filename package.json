@@ -10,7 +10,7 @@
     "url": "https://github.com/mehwww/dmzj-archives.git"
   },
   "dependencies": {
-    "cheerio": "^0.18.0",
+    "cheerio": "^0.20.0",
     "request": "^2.51.0"
   }
 }
